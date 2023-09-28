@@ -104,14 +104,9 @@ userSchema.pre('save', async function (next) {
   next()
 })
 
-// { query: false, document: true },
 userSchema.pre('deleteOne', async function (next) {
-  const user = this
-  console.log('USER=', user)
-  console.log('_id=', user._id)
-
-  const result = await Task.deleteMany({ owner: user._id })
-  console.log({ result })
+  const _id = this._conditions._id // TODO: not optimal
+  await Task.deleteMany({ owner: _id })
   next()
 })
 
