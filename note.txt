@@ -1,0 +1,5 @@
+Commands:
+
+/Users/nesk/mongodb/bin/mongod.exe --dbpath=/Users/nesk/mongodb-data
+
+git push heroku master
