@@ -1,4 +1,6 @@
 module.exports = async (req, res, next) => {
-  console.log(req.method, req.path)
+  console.info(
+    `${req.method} ${req.protocol}://${req.get('host') + req.originalUrl}`
+  )
   next()
 }
