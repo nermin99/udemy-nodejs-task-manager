@@ -2,4 +2,6 @@ Commands:
 
 /Users/nesk/mongodb/bin/mongod.exe --dbpath=/Users/nesk/mongodb-data
 
+heroku create NAME_HERE
+
 git push heroku master
